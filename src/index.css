@@ -1,13 +1,141 @@
-body {
+@import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
+
+* {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  font-family: "Nunito", sans-serif;
+  background-color: #f6f9ff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style-type: none;
+}
+
+input:not([type="checkbox"]) {
+  display: block;
+}
+
+/* login */
+
+.login-ct {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 68px;
+  gap: 2rem;
+}
+
+.login-ct .logo-area {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.login-ct .logo-area span {
+  color: #012970;
+  font-size: 32px;
+  font-weight: 600;
+}
+
+.login-ct .box {
+  width: 628px;
+  height: 550px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.25);
+  padding: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.login-ct .box .title {
+  text-align: center;
+}
+
+.login-ct .box .title h3 {
+  color: #012970;
+  font-size: 32px;
+  margin-bottom: 0.5rem;
+}
+
+.login-ct .box .title p {
+  color: #808080;
+  font-size: 20px;
+}
+
+.login-ct .single-form-item:not(:first-of-type):not(:last-of-type) {
+  margin: 1.5rem 0;
+}
+
+.login-ct .single-form-item label {
+  font-size: 24px;
+  color: #333;
+}
+
+.login-ct .single-form-item input:not([type="checkbox"]) {
+  width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  border: 1px solid #808080;
+  margin-top: 0.5rem;
+  padding-left: 0.75rem;
+  font-size: 20px;
+}
+
+.login-ct .single-form-item.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.login-ct .single-form-item.checkbox input {
+  width: 18px;
+  height: 18px;
+}
+
+.login-ct .single-form-item.checkbox label {
+  font-size: 20px;
+}
+
+.login-ct .submit-btn {
+  background-color: #4154f1;
+  color: #fff;
+  text-align: center;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 24px;
+  letter-spacing: 1px;
+  height: 50px;
+  transition: all 0.3s linear;
+}
+
+.login-ct .submit-btn:hover {
+  cursor: pointer;
+  background-color: rgba(65, 84, 241, 0.5);
+}
+
+.login-ct .bottom-text {
+  font-size: 20px;
+  color: #333;
+}
+
+.login-ct .bottom-text a {
+  color: #4154f1;
+  transition: all 0.3s linear;
+}
+
+.login-ct .bottom-text a:hover {
+  opacity: 0.5;
 }

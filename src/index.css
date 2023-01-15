@@ -94,7 +94,7 @@ input:not([type="checkbox"]) {
 }
 
 .lr-container .single-form-item:not(:first-of-type):not(:last-of-type) {
-  margin: 1.5rem 0;
+  margin: 1rem 0;
 }
 
 .lr-container .single-form-item input:not([type="checkbox"]) {

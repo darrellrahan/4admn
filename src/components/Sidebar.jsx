@@ -1,7 +1,8 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { sidebarData } from "../data";
 
-const Sidebar = () => {
+const Sidebar = ({ currentPage }) => {
   return (
     <nav className="sidebar-container">
       <ul>
@@ -9,14 +10,21 @@ const Sidebar = () => {
           const { icon, text, url } = e;
           return (
             <li key={i}>
-              <a
-                href={url}
+              <Link
+                to={url}
                 className={
-                  i === 0 || i === 1 ? "regular-text active" : "regular-text"
+                  i === 0 || currentPage === text
+                    ? "regular-text sidebar-link active"
+                    : "regular-text sidebar-link"
                 }
               >
-                {icon} {text}
-              </a>
+                {icon} {text}{" "}
+                {i === 1 && (
+                  <span style={{ fontSize: "smaller", marginLeft: "4.5rem" }}>
+                    6
+                  </span>
+                )}
+              </Link>
               {i === 0 && <hr />}
             </li>
           );

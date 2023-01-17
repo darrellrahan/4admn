@@ -14,7 +14,7 @@ const Header = () => {
           type="text"
           className="placeholder-icon"
           autoComplete="off"
-          placeholder="&#61442; &nbsp; Cari"
+          placeholder="Cari"
         />
       </div>
       <div className="right-header">

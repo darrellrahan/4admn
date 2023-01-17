@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito&display=swap");
-@import "//netdna.bootstrapcdn.com/font-awesome/3.0/css/font-awesome.css";
 
 /* Global */
 
@@ -20,6 +19,28 @@ ul {
 
 input:not([type="checkbox"]) {
   display: block;
+}
+
+input[type="checkbox"] {
+  width: 18px;
+  height: 18px;
+}
+
+input[type="email"]:not(:placeholder-shown) {
+  background-image: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.inbox,
+.sent,
+.favourite,
+.bin {
+  margin: 95px 0 0 300px;
+  padding: 1.5rem;
 }
 
 .heading {
@@ -114,11 +135,6 @@ input:not([type="checkbox"]) {
   gap: 0.5rem;
 }
 
-.lr-container .single-form-item.checkbox input {
-  width: 18px;
-  height: 18px;
-}
-
 .lr-container .single-form-item.checkbox label {
   color: #333;
 }
@@ -169,6 +185,10 @@ header {
   justify-content: space-between;
   box-shadow: 0px 1px 4px #b6b6b6;
   z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .left-header,
@@ -185,15 +205,20 @@ header {
 .left-header input {
   width: 320px;
   height: 50px;
-  padding-left: 0.75rem;
+  padding-left: 3rem;
   font-size: 20px;
   background-color: #efefef;
   border-radius: 4px;
   border: none;
+  background-image: url("../src/assets/search.svg");
+  background-position: calc(0% + 12px) center;
+  background-repeat: no-repeat;
+  font-family: "Nunito", sans-serif;
+  transition: all 0.3s linear;
 }
 
-.placeholder-icon::-webkit-input-placeholder {
-  font-family: FontAwesome;
+.left-header input:focus {
+  width: 420px;
 }
 
 .right-header {
@@ -226,7 +251,7 @@ header {
   width: fit-content;
   background-color: #fff;
   padding: 0.2rem 0;
-  position: absolute;
+  position: fixed;
   top: 100px;
   left: 0;
   bottom: 0;
@@ -236,7 +261,7 @@ header {
   width: 300px;
 }
 
-.sidebar-container a {
+.sidebar-link {
   color: #012970;
   margin: 1.5rem;
   padding: 0.5rem;
@@ -255,9 +280,46 @@ header {
 }
 
 .sidebar-container .active,
-.sidebar-container a:hover {
+.sidebar-link:hover {
   background-color: #dae9ff;
   border-radius: 4px;
   color: #4154f1;
   cursor: pointer;
+}
+
+/* Inbox */
+
+.inbox .heading {
+  text-align: left;
+}
+
+.single-letter {
+  padding: 1rem;
+  margin: 1.5rem 0;
+  width: fit-content;
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 2px 2px 8px #b6b6b6;
+  width: 370px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.single-letter .top-text {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.75rem;
+}
+
+.single-letter .name {
+  color: #012970;
+}
+
+.single-letter .date {
+  font-size: smaller;
+}
+
+.single-letter .messages {
+  color: #333;
 }

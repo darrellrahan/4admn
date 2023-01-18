@@ -35,12 +35,18 @@ a {
   color: inherit;
 }
 
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
 .inbox,
 .sent,
 .favourite,
 .bin {
   margin: 95px 0 0 300px;
-  padding: 1.5rem;
+  padding: 2rem 0 1rem 3rem;
 }
 
 .heading {
@@ -153,7 +159,6 @@ a {
 }
 
 .lr-container .submit-btn:hover {
-  cursor: pointer;
   background-color: rgba(65, 84, 241, 0.5);
 }
 
@@ -242,7 +247,6 @@ header {
 
 .dropdown-btn:hover {
   opacity: 0.5;
-  cursor: pointer;
 }
 
 /* Sidebar */
@@ -284,10 +288,13 @@ header {
   background-color: #dae9ff;
   border-radius: 4px;
   color: #4154f1;
-  cursor: pointer;
 }
 
 /* Inbox */
+
+.inbox {
+  display: flex;
+}
 
 .inbox .heading {
   text-align: left;
@@ -322,4 +329,58 @@ header {
 
 .single-letter .messages {
   color: #333;
+}
+
+/* Message Area */
+
+.message-area {
+  background-color: #fff;
+  position: fixed;
+  top: 100px;
+  right: 0;
+  bottom: 0;
+  left: 765px;
+  padding: 1.5rem;
+}
+
+.top-message {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.top-message .left {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.top-message .left h3 {
+  font-size: 18px;
+  color: #012970;
+}
+
+.top-message .left p,
+.top-message .right p {
+  font-size: 14px;
+}
+
+.top-message .right .buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.top-message .right .buttons button {
+  color: #012970;
+  font-size: 18px;
+  padding-bottom: 0.5rem;
+}
+
+.message-area hr {
+  margin: 1rem 0;
+  height: 0.1rem;
+  border: none;
+  background-color: #b6b6b6;
 }
